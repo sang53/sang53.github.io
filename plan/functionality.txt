@@ -1,0 +1,18 @@
+Landing page:
+- animation on load?
+- NavBar: home, projects, socials, resume &| cv/about
+- short desc of who i am
+
+Projects:
+- displays all projects worth showing - title, screenshot/slideshow, gh link, link to individual project
+
+projects/:project-name:
+- Title, slideshow/carousel, description, technologies used, gh link, link to deployed project
+
+resume:
+resume + print button
+
+CV/about:
+- cover letter + print button
+OR 
+- Information of what I have done
