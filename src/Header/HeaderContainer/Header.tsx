@@ -1,7 +1,7 @@
 import NavBar from "./NavBar/NavBar";
-import classes from "./Header.module.css";
+import classes from "./HeaderContainer.module.css";
 
-export default function Header() {
+export default function HeaderContainer() {
   return (
     <div className={classes.header}>
       <div>Sang Won Cho</div>
