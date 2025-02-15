@@ -1,0 +1,10 @@
+.navBar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+}
+
+.active {
+}

@@ -1,0 +1,3 @@
+.landing {
+  composes: landing-main-containers from global;
+}

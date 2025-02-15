@@ -59,3 +59,21 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+:root {
+  scroll-snap-type: y proximity;
+}
+
+#root {
+  position: relative;
+}
+
+.landing-main-containers {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-snap-align: center;
+}

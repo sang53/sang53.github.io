@@ -1,0 +1,9 @@
+.project {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  scroll-snap-align: center;
+
+  > a {
+    grid-row: span 4;
+  }
+}

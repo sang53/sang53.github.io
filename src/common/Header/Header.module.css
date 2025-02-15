@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: grey;
+}
