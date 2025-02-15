@@ -7,7 +7,7 @@ export default function Technology() {
       {
         // add icons of technologies used in projects & maybe some information on hover
       }
-      <button>Projects:</button>
+      <a href="#projects-container">Projects:</a>
     </div>
   );
 }

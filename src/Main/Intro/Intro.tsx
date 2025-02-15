@@ -13,7 +13,7 @@ export default function Intro() {
         If given a shot, despite the lack of a computer science degree, I
         promise you that I will be passionate and try my absolute best
       </p>
-      <button>Technologies:</button>
+      <a href="#technologies">Technologies:</a>
     </div>
   );
 }

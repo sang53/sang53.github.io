@@ -16,6 +16,7 @@
 - Main page => will contain all relevant information to be scrolled through
 - Each section will have min-height 100vh for cleaner look & demarcation
 - proximity scroll snap to ease of use
+- Maybe add different animations for each section -> fading in & out, translate from out of screen, typing effect, etc
 
 **Sections:**
 
