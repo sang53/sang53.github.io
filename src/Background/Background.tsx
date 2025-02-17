@@ -11,8 +11,8 @@ export default function Background() {
   return (
     <div id="background-container" className={classes.container}>
       <Canvas camera={{ position: camera.position, fov: camera.fov }}>
-        <Spheres3DContainer />
         <CursorSpotlight />
+        <Spheres3DContainer />
         <DirectLights />
       </Canvas>
     </div>

@@ -1,25 +1,18 @@
-import { RootState, useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import { SETTINGS } from "../Settings";
-import { Color, Group, PerspectiveCamera } from "three";
+import { Color } from "three";
 import { sphereType } from "../Types";
-import { useRef } from "react";
-import { getRandomColor, getRandomCoordsInView } from "../Helpers";
 import Sphere3D from "../Sphere3D/Sphere3D";
+import { useContainerHook } from "./useContainerHook";
+import { resetSphere } from "../Helpers/Vector3Helpers";
 
 const { sphereGen, sphereAnim } = SETTINGS;
 
 export default function Spheres3DContainer() {
-  const { camera, viewport, raycaster } = useThree<
-    RootState & { camera: PerspectiveCamera }
-  >();
-  const groupRef = useRef<Group>(null);
+  const [camera, raycaster, groupRef] = useContainerHook();
   let hovObjs: Array<sphereType> = [];
 
-  const spherePos = Array.from({ length: sphereGen.num }, () =>
-    getRandomCoordsInView(sphereGen.zMinMax, camera.fov, viewport.aspect)
-  );
-
-  useFrame(({ pointer, viewport }) => {
+  useFrame(({ pointer }) => {
     if (!groupRef.current) return;
 
     // get all objects that intersects with pointer
@@ -34,10 +27,7 @@ export default function Spheres3DContainer() {
       if (intersects.some((hitObj) => hitObj.object === hovObj)) return;
 
       // if previously hovered object not hovered anymore => reset position & colour
-      hovObj.position.set(
-        ...getRandomCoordsInView(sphereGen.zMinMax, camera.fov, viewport.aspect)
-      );
-      hovObj.material.color.set(getRandomColor());
+      resetSphere(hovObj);
     });
 
     // all hovered objects => speed up colour change
@@ -55,14 +45,8 @@ export default function Spheres3DContainer() {
 
   return (
     <group ref={groupRef}>
-      {spherePos.map((position, idx) => {
-        return (
-          <Sphere3D
-            key={idx}
-            initPos={position}
-            initColour={getRandomColor()}
-          />
-        );
+      {Array.from({ length: sphereGen.num }, (_v, idx) => {
+        return <Sphere3D key={idx} />;
       })}
     </group>
   );

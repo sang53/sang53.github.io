@@ -1,8 +1,19 @@
-import { Color, Mesh, MeshStandardMaterial, SphereGeometry } from "three";
+import {
+  Color,
+  Mesh,
+  MeshStandardMaterial,
+  SphereGeometry,
+  Vector3,
+} from "three";
 
 // mesh type of Sphere3D
 export type sphereType = Mesh<SphereGeometry, MeshStandardMaterial> & {
-  userData: { destColour: Color };
+  userData: sphereUserData;
+};
+
+export type sphereUserData = {
+  destColour: Color;
+  velocity: Vector3;
 };
 
 // returns tuple of [T], length: N
