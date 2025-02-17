@@ -6,9 +6,9 @@ export default function BackgroundWrapper({
 }: {
   children: JSX.Element;
 }) {
-  const [three, toggleThree] = useReducer((prev) => !prev, true);
+  const [enableThree, toggleThree] = useReducer((prev) => !prev, true);
   return (
-    <BackgroundContext.Provider value={{ three, toggleThree }}>
+    <BackgroundContext.Provider value={{ enableThree, toggleThree }}>
       {children}
     </BackgroundContext.Provider>
   );

@@ -33,6 +33,7 @@ export default tseslint.config(
       ],
       ...react.configs.recommended.rules,
       ...react.configs["jsx-runtime"].rules,
+      "react/no-unknown-property": 0,
     },
   },
   eslintConfigPrettier

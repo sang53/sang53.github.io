@@ -1,0 +1,31 @@
+:root {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  color: white;
+  background-color: black;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#root {
+  position: relative;
+}
+
+.landing-main-containers {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-snap-align: center;
+  z-index: -1;
+
+  > * {
+    z-index: 1;
+  }
+}

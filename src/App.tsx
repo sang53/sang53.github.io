@@ -1,22 +1,16 @@
-import Landing from "./Main/Landing/Landing.tsx";
-import Intro from "./Main/Intro/Intro.tsx";
-import Technology from "./Main/Technology/Technology.tsx";
-import Projects from "./Main/Projects/ProjectContainer/Projects.tsx";
-import HeaderContainer from "./Header/HeaderContainer/HeaderContainer.tsx";
 import ThemeWrapper from "./contexts/Theme/ThemeWrapper.tsx";
 import BackgroundWrapper from "./contexts/Background/BackgroundWrapper.tsx";
+import "./App.css";
+import Background from "./Background/Background.tsx";
+import MainPage from "./Main/MainPage.tsx";
 
 export default function App() {
   return (
     <ThemeWrapper>
       <BackgroundWrapper>
-        <div></div>
+        <Background />
       </BackgroundWrapper>
-      <HeaderContainer />
-      <Landing />
-      <Intro />
-      <Technology />
-      <Projects />
+      <MainPage />
     </ThemeWrapper>
   );
 }

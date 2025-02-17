@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 interface BackgroundContext {
-  three: boolean;
+  enableThree: boolean;
   toggleThree: () => void;
 }
 
