@@ -5,7 +5,7 @@ import { useToggle } from "../hooks/useToggle/useToggle";
 export default function BackgroundWrapper({
   children,
 }: {
-  children: Iterable<ReactNode>;
+  children: ReactNode;
 }) {
   const [three, toggleThree] = useToggle("three", true, false);
   return (
