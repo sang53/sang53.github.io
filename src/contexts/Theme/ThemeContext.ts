@@ -5,4 +5,7 @@ interface ThemeContext {
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContext | null>(null);
+export const ThemeContext = createContext<ThemeContext>({
+  theme: "dark",
+  toggleTheme: () => undefined,
+});

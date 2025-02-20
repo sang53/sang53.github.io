@@ -7,22 +7,28 @@ const { directLights } = SETTINGS;
 
 export default function DirectLights({
   intensity = directLights.intensity,
+  depth,
 }: Props) {
-  const { camera } = useThree();
+  const { camera, scene } = useThree();
   return (
     <group>
       {Array.from({ length: 4 }, (_v, k) => {
         const position = new Vector3(
           k < 2 ? 1 : -1,
           k % 2 === 0 ? 1 : -1,
-          1
+          depth
         ).unproject(camera);
         return (
-          <directionalLight key={k} position={position} intensity={intensity} />
+          <directionalLight
+            key={k}
+            position={position}
+            intensity={intensity}
+            target={scene.getObjectByName("target")}
+          />
         );
       })}
     </group>
   );
 }
 
-type Props = Partial<ConstToPrimitive<typeof directLights>>;
+type Props = Partial<ConstToPrimitive<typeof directLights>> & { depth: number };

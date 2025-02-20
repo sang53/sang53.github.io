@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-export function useToggle<T extends validValues = validValues>(
+export function useToggle<T extends validValues>(
   key: string,
   defaultVal: T,
   otherVal: T
@@ -19,4 +19,4 @@ export function useToggle<T extends validValues = validValues>(
   return [curr, toggleCurr] as const;
 }
 
-type validValues = string | boolean;
+type validValues = "light" | "dark" | boolean;

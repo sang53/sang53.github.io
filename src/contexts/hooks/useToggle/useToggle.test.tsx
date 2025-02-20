@@ -3,7 +3,7 @@ import { useToggle } from "./useToggle";
 import { describe, expect, test, vi } from "vitest";
 import { userEvent } from "@testing-library/user-event";
 
-type validVal = string | boolean;
+type validVal = "light" | "dark" | boolean;
 
 function HookComponent({
   defVal,
@@ -44,7 +44,7 @@ describe("initial value set correctly", () => {
   test.for([
     { def: true, other: false, expected: true },
 
-    { def: "light", other: "dark", expected: "light" },
+    { def: "light", other: "dark", expected: "light" } as const,
   ])("default: $def, other: $other", ({ def, other, expected }) => {
     const { mockGetItem } = setupTest(def, other);
     expect(screen.getByTestId("hook")).toHaveTextContent(String(expected));
@@ -58,7 +58,7 @@ describe("initial value set correctly", () => {
       other: "light",
       stored: JSON.stringify("dark"),
       expected: "dark",
-    },
+    } as const,
   ])(
     "default: $def, other: $other, stored: $stored",
     ({ def, other, stored, expected }) => {
@@ -72,7 +72,7 @@ describe("initial value set correctly", () => {
 describe("toggle value correctly", () => {
   test.for([
     { def: true, other: false },
-    { def: "light", other: "dark" },
+    { def: "light", other: "dark" } as const,
   ])("toggles value between $def & $other", async ({ def, other }) => {
     const { user } = setupTest(def, other);
     expect(screen.getByTestId("hook")).toHaveTextContent(String(def));
@@ -86,7 +86,7 @@ describe("toggle value correctly", () => {
 describe("sets local storage", () => {
   test.for([
     { def: true, other: false },
-    { def: "light", other: "dark" },
+    { def: "light", other: "dark" } as const,
   ])("saves $other", async ({ def, other }) => {
     const { user, mockSetItem } = setupTest(def, other);
     await user.click(screen.getByRole("button"));

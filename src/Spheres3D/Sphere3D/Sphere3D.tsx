@@ -54,9 +54,7 @@ function calcPosition(sphereMesh: sphereType, delta: number) {
   sphereMesh.position.add(sphereMesh.userData.velocity);
 
   // if sphere is too close to screen => reset position & colour, invert velocity for bounce effect
-  if (sphereMesh.position.z >= sphereReset.zMin) {
-    resetSphere(sphereMesh);
-  }
+  if (sphereMesh.position.z >= sphereReset.zMin) resetSphere(sphereMesh);
 }
 
 function animateSphere(sphereMesh: sphereType, delta: number) {

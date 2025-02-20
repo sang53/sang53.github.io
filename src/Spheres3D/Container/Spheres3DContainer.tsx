@@ -5,12 +5,19 @@ import { sphereType } from "../Types";
 import Sphere3D from "../Sphere3D/Sphere3D";
 import { useContainerHook } from "./useContainerHook";
 import { resetSphere } from "../Helpers/Vector3Helpers";
+import { useMemo } from "react";
 
 const { sphereGen, sphereAnim } = SETTINGS;
 
 export default function Spheres3DContainer() {
   const [camera, raycaster, groupRef] = useContainerHook();
   let hovObjs: Array<sphereType> = [];
+
+  const spheres = useMemo(() => {
+    return Array.from({ length: sphereGen.num }, (_v, idx) => {
+      return <Sphere3D key={idx} />;
+    });
+  }, []);
 
   useFrame(({ pointer }) => {
     if (!groupRef.current) return;
@@ -43,11 +50,5 @@ export default function Spheres3DContainer() {
     hovObjs = intersects.map(({ object }) => object);
   });
 
-  return (
-    <group ref={groupRef}>
-      {Array.from({ length: sphereGen.num }, (_v, idx) => {
-        return <Sphere3D key={idx} />;
-      })}
-    </group>
-  );
+  return <group ref={groupRef}>{spheres}</group>;
 }

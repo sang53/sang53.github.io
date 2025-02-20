@@ -1,8 +1,6 @@
 :root {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  color: white;
-  background-color: black;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 

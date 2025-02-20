@@ -22,9 +22,11 @@ const [zMin, zMax] = SETTINGS.sphereReset.zMinMax;
 const [zMinInit, zMaxInit] = SETTINGS.sphereGen.zMinMax;
 
 export function initVectorHelpers(initCam: PerspectiveCamera) {
-  if (camera) return;
+  console.log("ran1");
+  if (camera === initCam) return;
+  console.log("ran2");
   camera = initCam;
-  cameraMatrix.multiply(camera.projectionMatrix);
+  cameraMatrix.identity().multiply(camera.projectionMatrix);
   cameraFrustum.setFromProjectionMatrix(cameraMatrix);
 }
 

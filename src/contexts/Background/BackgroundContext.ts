@@ -1,8 +1,11 @@
 import { createContext } from "react";
 
 interface BackgroundContext {
-  enableThree: boolean;
+  three: boolean;
   toggleThree: () => void;
 }
 
-export const BackgroundContext = createContext<BackgroundContext | null>(null);
+export const BackgroundContext = createContext<BackgroundContext>({
+  three: true,
+  toggleThree: () => undefined,
+});
