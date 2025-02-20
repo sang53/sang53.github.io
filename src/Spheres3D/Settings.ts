@@ -25,10 +25,11 @@ export const SETTINGS = {
   camera: {
     fov: 45,
     position: [0, 0, 0],
+    far: 500,
   },
   cursorSpot: {
     colour: 0xffffff,
-    intensity: 10000,
+    intensity: 7500,
     angle: 0.3,
     penumbra: 0.8,
     decay: 1.85,

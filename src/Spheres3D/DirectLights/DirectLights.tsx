@@ -10,6 +10,7 @@ export default function DirectLights({
   depth,
 }: Props) {
   const { camera, scene } = useThree();
+  const target = scene.getObjectByName("target");
   return (
     <group>
       {Array.from({ length: 4 }, (_v, k) => {
@@ -23,7 +24,7 @@ export default function DirectLights({
             key={k}
             position={position}
             intensity={intensity}
-            target={scene.getObjectByName("target")}
+            target={target}
           />
         );
       })}

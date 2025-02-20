@@ -9,15 +9,17 @@ export function useContainerHook() {
   // to reference group during raycast
   const groupRef = useRef<Group>(null);
 
+  // initialise & maintain frustum
   initVectorHelpers(state.camera);
-
-  // make sure camera is gc on dismount
   useEffect(() => {
+    // reset camera used for calculations on camera/viewport change
     initVectorHelpers(state.camera);
+
+    // unset camera on dismount
     return () => {
       resetCamera();
     };
   }, [state.camera, state.viewport]);
 
-  return [state.camera, state.raycaster, groupRef] as const;
+  return [state.raycaster, groupRef] as const;
 }
