@@ -5,11 +5,14 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
 import eslintConfigPrettier from "eslint-config-prettier";
+import testingLibrary from "eslint-plugin-testing-library";
+import jestDom from "eslint-plugin-jest-dom";
+import vitest from "@vitest/eslint-plugin";
 
 export default tseslint.config(
   { ignores: ["dist"] },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.strictTypeChecked],
+    extends: [js.configs.recommended, tseslint.configs.strictTypeChecked],
     settings: { react: { version: "18.3" } },
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -34,6 +37,23 @@ export default tseslint.config(
       ...react.configs.recommended.rules,
       ...react.configs["jsx-runtime"].rules,
       "react/no-unknown-property": 0,
+    },
+  },
+  {
+    files: ["**/*.test.{ts,tsx}"],
+    extends: [
+      testingLibrary.configs["flat/dom"],
+      testingLibrary.configs["flat/react"],
+      jestDom.configs["flat/recommended"],
+    ],
+    plugins: { vitest },
+    rules: {
+      ...vitest.configs.recommended.rules,
+    },
+    settings: {
+      vitest: {
+        typecheck: true,
+      },
     },
   },
   eslintConfigPrettier
