@@ -1,19 +1,16 @@
-import { ReactNode, useReducer } from "react";
+import { ReactNode } from "react";
 import { ThemeContext } from "./ThemeContext";
+import { useToggle } from "../hooks/useToggle/useToggle";
 
 export default function ThemeWrapper({
   children,
 }: {
   children: Iterable<ReactNode>;
 }) {
-  const [theme, toggleTheme] = useReducer<string, never>(themeReducer, "dark");
+  const [theme, toggleTheme] = useToggle("theme", "dark", "light");
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-}
-
-function themeReducer(prevTheme: string) {
-  return prevTheme === "light" ? "dark" : "light";
 }
