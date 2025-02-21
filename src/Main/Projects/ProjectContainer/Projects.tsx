@@ -4,10 +4,10 @@ import classes from "./Projects.module.css";
 
 export default function Projects() {
   return (
-    <div id="projects-container" className={classes.projectContainer}>
+    <section id="projects-container" className={classes.projectContainer}>
       {projects.map((project, idx) => {
         return <ProjectItem key={idx} project={project} />;
       })}
-    </div>
+    </section>
   );
 }

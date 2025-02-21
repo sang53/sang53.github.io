@@ -29,25 +29,37 @@ export default function NavBar() {
 
   return (
     <nav className={classes.navBar}>
-      <a href="#landing" className={activeId === "landing" ? active : inactive}>
+      <a
+        href="#landing"
+        draggable="false"
+        className={activeId === "landing" ? active : inactive}
+      >
         Home
       </a>
-      <a href="#intro" className={activeId === "intro" ? active : inactive}>
+      <a
+        href="#intro"
+        draggable="false"
+        className={activeId === "intro" ? active : inactive}
+      >
         About
       </a>
       <a
         href="#technologies"
+        draggable="false"
         className={activeId === "technologies" ? active : inactive}
       >
         Skills
       </a>
       <a
         href="#projects-container"
+        draggable="false"
         className={activeId === "projects-container" ? active : inactive}
       >
         Projects
       </a>
-      <a className={inactive}>Resume</a>
+      <a className={inactive} draggable="false">
+        Resume
+      </a>
     </nav>
   );
 }

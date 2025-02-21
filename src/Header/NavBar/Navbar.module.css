@@ -10,7 +10,6 @@
     padding-block: 0.25rem;
     border-width: 1px;
     transition: transform 0.4s ease-out, border-style 0.4s;
-    will-change: contents;
   }
 }
 

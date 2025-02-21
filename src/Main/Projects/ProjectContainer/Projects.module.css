@@ -1,5 +1,4 @@
 .projectContainer {
-  composes: landing-main-containers from global;
   align-items: stretch;
   padding-inline: 3rem;
 }
