@@ -1,8 +1,60 @@
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/Cormorant/Cormorant-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("./assets/Cormorant/Cormorant-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains";
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrains";
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+  src: url("./assets/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf")
+    format("truetype");
+}
+
 :root {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
+  font-family: "JetBrains", "Cormorant", system-ui;
+
+  --font-size-large: 40px;
+  --font-size-med: 28px;
+  --font-size-small: 20px;
+
+  --font-weight-heading: 550;
+  --font-weight-normal: 450;
+
+  --backdrop-dark: rgba(0, 0, 0, 0.5);
+  --backdrop-light: rgba(255, 255, 255, 0.5);
+  --bgc-dark: black;
+  --bgc-light: white;
+  --font-light: black;
+  --font-dark: white;
 
   &::-webkit-scrollbar {
     display: none;
@@ -23,7 +75,23 @@
   scroll-snap-align: center;
   z-index: -1;
 
-  > * {
+  font-size: var(--font-size-med);
+
+  * {
     z-index: 1;
+  }
+
+  h1 {
+    font-weight: var(--font-weight-heading);
+    font-size: var(--font-size-large);
+  }
+
+  a {
+    font-style: italic;
+  }
+
+  p {
+    font-weight: var(--font-weight-normal);
+    background-blend-mode: overlay;
   }
 }
