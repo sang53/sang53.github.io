@@ -1,4 +1,5 @@
-.projectContainer {
-  align-items: stretch;
-  padding-inline: 3rem;
+.projectContainer[id="projects-container"] {
+  scroll-snap-align: none;
+  gap: 25vh;
+  padding-bottom: 40vh;
 }

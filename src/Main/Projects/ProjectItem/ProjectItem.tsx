@@ -1,13 +1,16 @@
+import { use } from "react";
 import { Project } from "../ProjectInfo";
 import classes from "./ProjectItem.module.css";
+import { ThemeContext } from "../../../contexts/Theme/ThemeContext";
 
 function getImgUrl(relative: string) {
   return new URL(relative, import.meta.url).href;
 }
 
 export default function ProjectItem({ project }: { project: Project }) {
+  const { theme } = use(ThemeContext);
   return (
-    <div id="project-item" className={classes.project}>
+    <div id="project-item" className={classes[theme]}>
       <a href={project.links.deploy}>
         <img src={getImgUrl(project.img)} />
       </a>

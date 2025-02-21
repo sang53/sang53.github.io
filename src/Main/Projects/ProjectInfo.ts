@@ -3,7 +3,7 @@ export const projects: Project[] = [
     title: "Battleships",
     img: "../../../assets/images/pokemon-png.png",
     info: "Web browser remake of popular Battleships game. Single & 2 player modes",
-    technologies: ["vanilla javascript", "css", "html"],
+    technologies: ["javascript", "css", "html"],
     links: {
       src: "#",
       deploy: "#",
