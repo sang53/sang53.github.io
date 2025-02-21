@@ -1,0 +1,77 @@
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  > button {
+    background-color: inherit;
+    border: none;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    will-change: contents;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.dark {
+  composes: buttons;
+
+  > button:first-child > svg {
+    stroke: var(--font-dark);
+    fill: var(--font-light);
+    transition: fill 750ms;
+
+    &:hover {
+      fill: var(--bgc-light);
+    }
+  }
+  > button:last-child > svg {
+    stroke: var(--font-light);
+    fill: var(--font-dark);
+
+    &:hover {
+      animation: rotation 1s 0s infinite forwards;
+    }
+  }
+}
+
+.light {
+  composes: buttons;
+
+  > button:first-child > svg {
+    stroke: var(--font-light);
+    fill: var(--font-dark);
+    transition: stroke 1s, fill 1s, transform 500ms;
+
+    &:hover {
+      fill: var(--bgc-dark);
+      stroke: var(--bgc-light);
+      transform: scale(2);
+      transition: transform 1s 500ms linear, stroke 750ms, fill 750ms;
+    }
+  }
+
+  > button:last-child > svg {
+    stroke: var(--font-dark);
+    fill: var(--font-light);
+
+    &:hover {
+      animation: rotation 1s 0s infinite forwards;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}

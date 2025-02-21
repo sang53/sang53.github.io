@@ -1,9 +1,23 @@
 .header {
   display: flex;
+  flex-wrap: wrap;
   padding: 1rem 1rem;
   justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 2;
+  background-blend-mode: overlay;
+}
+
+.dark {
+  composes: header;
+  background-color: var(--backdrop-dark);
+  color: var(--font-dark);
+}
+
+.light {
+  composes: header;
+  background-color: var(--backdrop-light);
+  color: var(--font-light);
 }

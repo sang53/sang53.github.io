@@ -1,10 +1,36 @@
 .navBar {
   display: flex;
-  gap: 2rem;
-}
+  gap: clamp(5px, 5%, 3rem);
+  font-size: var(--font-size-small);
 
-.navLink {
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-width: 1px;
+    transition: transform 0.4s ease-out, border-style 0.4s;
+    will-change: contents;
+  }
 }
 
 .active {
+  border-style: solid;
+  transform: scale(1.2);
+}
+
+.inactive {
+  border-style: dashed;
+  &:hover {
+    transform: scale(1.1);
+    border-style: solid;
+  }
+}
+
+.dark {
+  border-color: var(--font-dark);
+}
+
+.light {
+  border-color: var(--font-light);
 }
