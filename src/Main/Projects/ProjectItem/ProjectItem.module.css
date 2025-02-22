@@ -2,9 +2,11 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   scroll-snap-align: center;
-  padding-block: 1rem;
-  gap: 1rem;
-  min-height: 60vh;
+  padding: 1rem;
+  gap: 1rem 3rem;
+  min-height: 75vh;
+  border: 1px solid;
+  border-radius: 15px;
 
   @media (max-width: 1050px) {
     grid-template-columns: 1fr;
