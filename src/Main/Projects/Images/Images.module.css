@@ -1,0 +1,30 @@
+a.container:has(img) {
+  position: relative;
+  grid-row: span 4;
+  border: none;
+  padding: 0;
+
+  @media (max-width: 1050px) {
+    min-height: 375px;
+  }
+
+  @media (max-width: 500px) {
+    min-height: 200px;
+  }
+
+  &:hover {
+    background-color: inherit;
+  }
+}
+
+.image {
+  transition: opacity 2s 1s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.front {
+  composes: image;
+  opacity: 1;
+}

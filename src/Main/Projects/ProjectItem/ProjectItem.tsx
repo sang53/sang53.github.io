@@ -2,19 +2,15 @@ import { use } from "react";
 import { Project } from "../ProjectInfo";
 import classes from "./ProjectItem.module.css";
 import { ThemeContext } from "../../../contexts/Theme/ThemeContext";
-
-function getImgUrl(relative: string) {
-  return new URL(relative, import.meta.url).href;
-}
+import Images from "../Images/Images";
 
 export default function ProjectItem({ project }: { project: Project }) {
   const { theme } = use(ThemeContext);
+
   return (
     <div id="project-item" className={classes[theme]}>
-      <a href={project.links.deploy}>
-        <img src={getImgUrl(project.img)} />
-      </a>
       <h1>{project.title}</h1>
+      <Images link={project.links.deploy} imgLinks={project.img} />
       <div>{project.info}</div>
       <ul>
         {project.technologies.map((tech, idx) => {
@@ -22,8 +18,22 @@ export default function ProjectItem({ project }: { project: Project }) {
         })}
       </ul>
       <div>
-        <a href={project.links.src}>GitHub</a>
-        <a href={project.links.deploy}>Deployed</a>
+        <a
+          href={project.links.src}
+          draggable="false"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href={project.links.deploy}
+          draggable="false"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Deployed
+        </a>
       </div>
     </div>
   );
