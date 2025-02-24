@@ -1,6 +1,6 @@
 .navBar {
   display: flex;
-  gap: clamp(5px, 5%, 3rem);
+  gap: 3rem;
   font-size: var(--font-size-small);
 
   a {

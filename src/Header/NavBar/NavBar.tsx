@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import classes from "./Navbar.module.css";
+
+export default memo(NavBar);
 
 const { active, inactive } = classes;
 
-export default function NavBar() {
+function NavBar() {
   const [activeId, setActiveId] = useState("landing");
 
   useEffect(() => {

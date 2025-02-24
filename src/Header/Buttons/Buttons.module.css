@@ -1,16 +1,7 @@
 .buttons {
-  display: flex;
-  gap: 1rem;
-
   > button {
     background-color: inherit;
     border: none;
-  }
-
-  svg {
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
   }
 }
 

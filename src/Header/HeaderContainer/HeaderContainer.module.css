@@ -8,12 +8,32 @@
   width: 100vw;
   z-index: 2;
   background-blend-mode: overlay;
+
+  div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  > div:first-child svg {
+    transition: fill 500ms;
+  }
 }
 
 .dark {
   composes: header;
   background-color: var(--backdrop-dark);
   color: var(--font-dark);
+
+  > div:first-child svg {
+    fill: var(--font-dark);
+  }
 }
 
 .light {
