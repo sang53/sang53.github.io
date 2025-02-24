@@ -9,24 +9,50 @@ export default function Intro({ nextId }: { nextId: string }) {
         <div className="flex">
           <h2>Past</h2>
           <hr />
+          <p>I was a medical student at UNSW until 2023.</p>
           <p>
-            After 5 years of Medschool, I decided to follow my passion instead
+            During this time, my goals and outlook on life started to change and
+            develop.
+          </p>
+          <p>
+            In the final year of my studies, I decided that being a doctor was
+            not the career I wanted.
+          </p>
+          <p>
+            I chose to pursue computer science instead, which I had been
+            interested in since childhood.
           </p>
         </div>
         <div className="flex">
           <h2>Present</h2>
           <hr />
           <p>
-            Now, I&apos;m an aspiring web developer, specialising in front end
-            development (for now...)
+            After 1.5 years of self-learning and studying, I am ready to work as
+            a front-end web developer.
+          </p>
+          <p>
+            I am very passionate about web development, and computer science as
+            a whole.
+          </p>
+          <p>
+            I have found myself happier and more fulfilled, and can promise that
+            I will dedicate myself my role.
           </p>
         </div>
         <div className="flex">
           <h2>Future</h2>
           <hr />
           <p>
-            If given a shot, despite the lack of a computer science degree, I
-            promise you that I will be passionate and try my absolute best
+            Firstly, I hope to find a job that will help me gain experience in
+            this industry and teach me skills to improve my capability.
+          </p>
+          <p>
+            I plan to expand my skillset to back-end web development, becoming a
+            full-stack web developer.
+          </p>
+          <p>
+            I want to continue to improve and become that best web developer I
+            can be!
           </p>
         </div>
       </div>
