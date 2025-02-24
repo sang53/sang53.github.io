@@ -1,12 +1,14 @@
 .project {
+  min-height: 75vh;
+  background-color: var(--curr-backdrop);
   display: grid;
   grid-template-columns: 2fr 3fr;
+  gap: 1rem 3rem;
   scroll-snap-align: center;
   padding: 1rem;
-  gap: 1rem 3rem;
-  min-height: 75vh;
-  border: 1px solid;
+  border: 1px solid var(--curr-color);
   border-radius: 15px;
+  box-shadow: 0 0 3px 2px var(--curr-color);
 
   @media (max-width: 1050px) {
     grid-template-columns: 1fr;
@@ -14,36 +16,11 @@
 
   > h1 {
     font-size: var(--font-size-medplus);
-  }
-
-  ul {
-    width: fit-content;
     justify-self: center;
-  }
-
-  li {
-    padding-left: 1ch;
+    align-self: center;
   }
 
   > div > a {
     margin-inline: 1rem;
-  }
-}
-
-.dark {
-  composes: project;
-  background-color: var(--backdrop-dark);
-
-  li {
-    list-style: circle;
-  }
-}
-
-.light {
-  composes: project;
-  background-color: var(--backdrop-light);
-
-  li {
-    list-style: disc;
   }
 }

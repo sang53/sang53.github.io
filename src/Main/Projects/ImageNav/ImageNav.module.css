@@ -1,14 +1,13 @@
 .navBar {
   position: absolute;
-  bottom: 1rem;
+  bottom: -3rem;
   left: 45%;
   display: flex;
   width: 10%;
   justify-content: space-between;
   z-index: 2;
-  background-color: var(--backdrop-dark);
-  border: 1px solid var(--font-dark);
-  box-shadow: 0 0 3px 2px var(--font-light);
+  background-color: var(--curr-backdrop);
+  border: 1px solid var(--curr-color);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   transition: transform 500ms;
@@ -22,21 +21,22 @@
 .navButton {
   border-radius: 50px;
   width: 1rem;
-  height: 0.75rem;
-  background-color: var(--font-dark);
-  border: 1px solid var(--font-light);
+  height: 1rem;
+  background-color: var(--opp-color);
+  border: 1px solid var(--curr-color);
   will-change: transform;
   transition: transform 500ms;
 
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
   }
 }
 
 .active {
   composes: navButton;
-  background-color: var(--font-light);
-  border-color: var(--font-dark);
+  background-color: var(--curr-color);
+  opacity: 0.8;
+  border: none;
 }

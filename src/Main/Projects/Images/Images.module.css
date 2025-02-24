@@ -10,10 +10,6 @@
   @media (max-width: 500px) {
     min-height: 200px;
   }
-
-  &:hover {
-    background-color: inherit;
-  }
 }
 
 .image {

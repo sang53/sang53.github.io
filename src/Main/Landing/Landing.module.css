@@ -1,5 +1,3 @@
-.landing {
-  > p {
-    font-size: var(--font-size-medplus);
-  }
+.para {
+  font-size: var(--font-size-medplus);
 }

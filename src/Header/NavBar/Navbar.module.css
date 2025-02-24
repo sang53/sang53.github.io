@@ -1,35 +1,27 @@
 .navBar {
   display: flex;
   gap: 3rem;
-  font-size: var(--font-size-small);
+  align-items: center;
 
   a {
-    text-decoration: none;
-    color: inherit;
-    padding-inline: 1rem;
-    padding-block: 0.25rem;
-    border-width: 1px;
     transition: transform 0.4s ease-out, border-style 0.4s;
+
+    &:hover {
+      background-color: var(--curr-backdrop);
+      color: var(--curr-color);
+    }
   }
 }
 
 .active {
-  border-style: solid;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.inactive {
+a.inactive {
   border-style: dashed;
+
   &:hover {
     transform: scale(1.1);
     border-style: solid;
   }
-}
-
-.dark {
-  border-color: var(--font-dark);
-}
-
-.light {
-  border-color: var(--font-light);
 }

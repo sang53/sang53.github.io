@@ -3,9 +3,11 @@ import classes from "./Landing.module.css";
 
 export default function Landing({ nextId }: { nextId: string }) {
   return (
-    <section id="landing" className={classes.landing}>
-      <p>Hi, Welcome to my Portfolio Page</p>
-      <p>I&apos;m Sang Won Cho, a former medical student</p>
+    <section id="landing">
+      <p className={classes.para}>Hi, Welcome to my Portfolio Page</p>
+      <p className={classes.para}>
+        I&apos;m Sang Won Cho, a front-end web developer
+      </p>
       <a
         onClick={() => {
           scrollById(nextId);

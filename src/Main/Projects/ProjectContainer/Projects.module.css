@@ -1,4 +1,4 @@
-.projectContainer[id="projects-container"] {
+.projectContainer {
   scroll-snap-align: none;
   gap: 25vh;
   padding-bottom: 40vh;

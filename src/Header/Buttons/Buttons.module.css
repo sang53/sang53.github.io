@@ -1,7 +1,20 @@
 .buttons {
+  display: flex;
+  gap: 0.75rem;
+
   > button {
     background-color: inherit;
     border: none;
+
+    &:last-child > svg {
+      stroke: var(--opp-color);
+      fill: var(--curr-color);
+      transition: fill 500ms ease-out;
+
+      &:hover {
+        animation: rotation 1s 0s infinite forwards;
+      }
+    }
   }
 }
 
@@ -15,14 +28,6 @@
 
     &:hover {
       fill: var(--bgc-light);
-    }
-  }
-  > button:last-child > svg {
-    stroke: var(--font-light);
-    fill: var(--font-dark);
-
-    &:hover {
-      animation: rotation 1s 0s infinite forwards;
     }
   }
 }
@@ -40,15 +45,6 @@
       stroke: var(--bgc-light);
       transform: scale(2);
       transition: transform 750ms 250ms linear, stroke 500ms, fill 500ms;
-    }
-  }
-
-  > button:last-child > svg {
-    stroke: var(--font-dark);
-    fill: var(--font-light);
-
-    &:hover {
-      animation: rotation 1s 0s infinite forwards;
     }
   }
 }

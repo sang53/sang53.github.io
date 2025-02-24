@@ -6,22 +6,20 @@ export default function Images({ imgLinks }: Props) {
   const [images, currIdx, setHover, nextImg] = useImages(imgLinks);
 
   return (
-    <div
-      className={classes.container}
-      onMouseEnter={() => {
-        nextImg();
-        setHover(true);
-      }}
-      onMouseLeave={() => {
-        setHover(false);
-      }}
-    >
+    <div className={classes.container}>
       {images.map((image, idx) => {
         return (
           <img
             key={idx}
             src={image.src}
             className={idx === currIdx ? classes.front : classes.image}
+            onMouseEnter={() => {
+              nextImg();
+              setHover(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+            }}
           />
         );
       })}
