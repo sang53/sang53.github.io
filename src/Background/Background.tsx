@@ -12,20 +12,23 @@ const { camera } = SETTINGS;
 export default function Background() {
   const { three } = use(BackgroundContext);
   const { theme } = use(ThemeContext);
+
+  const background = (
+    <Canvas
+      camera={{
+        position: camera.position,
+        fov: camera.fov,
+        far: camera.far,
+      }}
+    >
+      <LightsContainer darkTheme={theme === "dark"} />
+      <Spheres3DContainer />
+    </Canvas>
+  );
+
   return (
     <div id="background-container" className={classes.container}>
-      {three && (
-        <Canvas
-          camera={{
-            position: camera.position,
-            fov: camera.fov,
-            far: camera.far,
-          }}
-        >
-          <LightsContainer darkTheme={theme === "dark"} />
-          <Spheres3DContainer />
-        </Canvas>
-      )}
+      {three && background}
     </div>
   );
 }

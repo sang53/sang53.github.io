@@ -4,11 +4,12 @@ import { sphereType } from "../Types";
 import Sphere3D from "../Sphere3D/Sphere3D";
 import { useContainerHook } from "./useContainerHook";
 import { resetSphere } from "../Helpers/Vector3Helpers";
-import { useMemo } from "react";
+import { memo, useMemo } from "react";
 
 const { sphereGen } = SETTINGS;
 
-export default function Spheres3DContainer() {
+export default memo(Spheres3DContainer);
+function Spheres3DContainer() {
   const [raycaster, groupRef] = useContainerHook();
 
   // memoise sphere to prevent re-render on theme toggle
