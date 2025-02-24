@@ -1,31 +1,35 @@
 import { useImages } from "../hooks/useImages";
+import ImageNav from "../ImageNav/ImageNav";
 import classes from "./Images.module.css";
 
-export default function Images({ link, imgLinks }: Props) {
-  const [images, currImg, linkRef, startSwap, stopSwap] = useImages(imgLinks);
+export default function Images({ imgLinks }: Props) {
+  const [images, currIdx, setHover, nextImg] = useImages(imgLinks);
 
   return (
-    <a
+    <div
       className={classes.container}
-      href={link}
-      ref={linkRef}
-      onMouseEnter={startSwap}
-      onMouseLeave={stopSwap}
+      onMouseEnter={() => {
+        nextImg();
+        setHover(true);
+      }}
+      onMouseLeave={() => {
+        setHover(false);
+      }}
     >
       {images.map((image, idx) => {
         return (
           <img
             key={idx}
             src={image.src}
-            className={idx === currImg ? classes.front : classes.image}
+            className={idx === currIdx ? classes.front : classes.image}
           />
         );
       })}
-    </a>
+      <ImageNav num={imgLinks.length} currIdx={currIdx} nextImg={nextImg} />
+    </div>
   );
 }
 
 type Props = {
-  link: string;
   imgLinks: string[];
 };
