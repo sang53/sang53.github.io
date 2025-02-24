@@ -1,6 +1,7 @@
 todo.txt
 dist/
 font-list.txt
+**/unused-fonts/
 
 # Logs
 logs

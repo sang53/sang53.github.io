@@ -1,27 +1,9 @@
 @font-face {
-  font-family: "Cormorant";
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("./assets/Cormorant/Cormorant-VariableFont_wght.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: "Cormorant";
-  font-weight: 300 700;
-  font-style: italic;
-  font-display: swap;
-  src: url("./assets/Cormorant/Cormorant-Italic-VariableFont_wght.ttf")
-    format("truetype");
-}
-
-@font-face {
   font-family: "JetBrains";
   font-weight: 100 800;
   font-style: normal;
   font-display: swap;
-  src: url("./assets/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
+  src: url("./assets/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
     format("truetype");
 }
 
@@ -30,7 +12,7 @@
   font-weight: 100 800;
   font-style: italic;
   font-display: swap;
-  src: url("./assets/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf")
+  src: url("./assets/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf")
     format("truetype");
 }
 
@@ -168,4 +150,5 @@ a {
 
 p {
   font-weight: var(--font-weight-normal);
+  line-height: 1.5;
 }
