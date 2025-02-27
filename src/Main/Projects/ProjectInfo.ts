@@ -1,37 +1,5 @@
 export const projects: Project[] = [
   {
-    title: "Battleships",
-    img: [
-      "/images/battleship/battleship-start.jpg",
-      "/images/battleship/battleship-place.jpg",
-      "/images/battleship/battleship-battle.jpg",
-      "/images/battleship/battleship-end.jpg",
-      "/images/battleship/battleship-mobile.jpg",
-    ],
-    info: "Browser remake of the Battleships game. Supports single player vs cpu, as well as tag-in multiplayer",
-    technologies: ["javascript", "css", "html"],
-    links: {
-      src: "https://github.com/sang53/TheOdinProject/tree/main/battleship",
-      deploy:
-        "https://sang53.github.io/TheOdinProject/battleship/dist/index.html",
-    },
-  },
-  {
-    title: "Pokemon Memory Game",
-    img: [
-      "/images/pokemon/pokemon-start.jpg",
-      "/images/pokemon/pokemon-game.jpg",
-      "/images/pokemon/pokemon-end.jpg",
-      "/images/pokemon/pokemon-mobile.jpg",
-    ],
-    info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to select as many different pokemon as you can. High score is tracked across games",
-    technologies: ["react", "css modules", "REST API"],
-    links: {
-      src: "https://github.com/sang53/pokemon-memory-game",
-      deploy: "https://sang53-pokemon-memory.netlify.app/",
-    },
-  },
-  {
     title: "Fake Shopping Page",
     img: [
       "/images/shopping/shopping-home.jpg",
@@ -55,6 +23,39 @@ export const projects: Project[] = [
     links: {
       src: "https://github.com/sang53/FakeShop",
       deploy: "https://fake-shop-site.netlify.app/",
+    },
+  },
+  {
+    title: "Pokemon Memory Game",
+    img: [
+      "/images/pokemon/pokemon-start.jpg",
+      "/images/pokemon/pokemon-game.jpg",
+      "/images/pokemon/pokemon-end.jpg",
+      "/images/pokemon/pokemon-mobile.jpg",
+    ],
+    info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to select as many different pokemon as you can. High score is tracked across games",
+    technologies: ["react", "css modules", "REST API"],
+    links: {
+      src: "https://github.com/sang53/pokemon-memory-game",
+      deploy: "https://sang53-pokemon-memory.netlify.app/",
+    },
+  },
+
+  {
+    title: "Battleships",
+    img: [
+      "/images/battleship/battleship-start.jpg",
+      "/images/battleship/battleship-place.jpg",
+      "/images/battleship/battleship-battle.jpg",
+      "/images/battleship/battleship-end.jpg",
+      "/images/battleship/battleship-mobile.jpg",
+    ],
+    info: "Browser remake of the Battleships game. Supports single player vs cpu, as well as tag-in multiplayer",
+    technologies: ["javascript", "css", "html"],
+    links: {
+      src: "https://github.com/sang53/TheOdinProject/tree/main/battleship",
+      deploy:
+        "https://sang53.github.io/TheOdinProject/battleship/dist/index.html",
     },
   },
   {
