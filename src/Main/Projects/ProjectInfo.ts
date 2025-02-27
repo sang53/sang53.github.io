@@ -2,10 +2,11 @@ export const projects: Project[] = [
   {
     title: "Battleships",
     img: [
-      "/images/poke/pokemon-png.png",
-      "/images/poke/poke-game-png.png",
-      "/images/poke/pokemon-jpeg.jpg",
-      "/images/poke/poke-game-jpeg.jpg",
+      "/images/battleship/battleship-start.jpg",
+      "/images/battleship/battleship-place.jpg",
+      "/images/battleship/battleship-battle.jpg",
+      "/images/battleship/battleship-end.jpg",
+      "/images/battleship/battleship-mobile.jpg",
     ],
     info: "Browser remake of the Battleships game. Supports single player vs cpu, as well as tag-in multiplayer",
     technologies: ["javascript", "css", "html"],
@@ -18,10 +19,10 @@ export const projects: Project[] = [
   {
     title: "Pokemon Memory Game",
     img: [
-      "/images/poke/pokemon-png.png",
-      "/images/poke/poke-game-png.png",
-      "/images/poke/pokemon-jpeg.jpg",
-      "/images/poke/poke-game-jpeg.jpg",
+      "/images/pokemon/pokemon-start.jpg",
+      "/images/pokemon/pokemon-game.jpg",
+      "/images/pokemon/pokemon-end.jpg",
+      "/images/pokemon/pokemon-mobile.jpg",
     ],
     info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to select as many different pokemon as you can. High score is tracked across games",
     technologies: ["react", "css modules", "REST API"],
@@ -33,10 +34,13 @@ export const projects: Project[] = [
   {
     title: "Fake Shopping Page",
     img: [
-      "/images/poke/pokemon-png.png",
-      "/images/poke/poke-game-png.png",
-      "/images/poke/pokemon-jpeg.jpg",
-      "/images/poke/poke-game-jpeg.jpg",
+      "/images/shopping/shopping-home.jpg",
+      "/images/shopping/shopping-category.jpg",
+      "/images/shopping/shopping-category-product.jpg",
+      "/images/shopping/shopping-products.jpg",
+      "/images/shopping/shopping-product-info.jpg",
+      "/images/shopping/shopping-cart.jpg",
+      "/images/shopping/shopping-mobile.jpg",
     ],
     info: "A demo shopping site made using data from Fake Store API. Search products by category or name, put desired quantity into shopping cart, and checkout after confirming purchase details. Carousel on landing page to display products.",
     technologies: [
