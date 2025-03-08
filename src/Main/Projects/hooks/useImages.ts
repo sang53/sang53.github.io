@@ -14,7 +14,7 @@ export function useImages(imgLinks: string[]) {
   // starts animation if hovered
   useEffect(() => {
     if (!hover) return;
-    const interval = setInterval(nextImg, 2250);
+    const interval = setInterval(nextImg, 2000);
 
     return () => {
       clearInterval(interval);

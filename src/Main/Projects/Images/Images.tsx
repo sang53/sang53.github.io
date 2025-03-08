@@ -14,7 +14,6 @@ export default function Images({ imgLinks }: Props) {
             src={image.src}
             className={idx === currIdx ? classes.front : classes.image}
             onMouseEnter={() => {
-              nextImg();
               setHover(true);
             }}
             onMouseLeave={() => {
