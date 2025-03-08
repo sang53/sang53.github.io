@@ -1,2 +1,36 @@
+.iconContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  svg,
+  img {
+    min-width: 75px;
+    min-height: 75px;
+    width: 7vw;
+    height: 7vw;
+    background-color: var(--curr-backdrop);
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.unstyled {
+  > svg {
+    fill: var(--curr-color);
+
+    &:first-child {
+      fill: var(--opp-color);
+      stroke: var(--curr-color);
+    }
+  }
+}
+
 .techContainer {
+  margin-bottom: 3rem;
 }
