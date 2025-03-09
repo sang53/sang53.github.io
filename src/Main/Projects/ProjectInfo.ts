@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "/images/pokemon/pokemon-mobile.jpg",
     ],
     info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to select as many different pokemon as you can. High score is tracked across games",
-    technologies: ["react", "css modules", "REST API"],
+    technologies: ["react", "REST API"],
     links: {
       src: "https://github.com/sang53/pokemon-memory-game",
       deploy: "https://sang53-pokemon-memory.netlify.app/",
@@ -59,15 +59,13 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Spheres3D background",
+    title: "Spheres3D Background",
     img: [
-      "/images/poke/pokemon-png.png",
-      "/images/poke/poke-game-png.png",
-      "/images/poke/pokemon-jpeg.jpg",
-      "/images/poke/poke-game-jpeg.jpg",
+      "/images/spheres3d/sphere3d-black.jpg",
+      "/images/spheres3d/sphere3d-white.jpg",
     ],
     info: "3D background created for my portfolio. 250 spheres are generated at random positions and move towards the camera while changing colours. Spheres move toward the cursor mimicking gravity. A spotlight points in the direction of the cursor for added interactivity.",
-    technologies: ["threejs", "react-three-fiber", "Typescript", "react"],
+    technologies: ["three.js", "react-three-fiber", "Typescript", "react"],
     links: {
       src: "https://github.com/sang53/Learn-threejs",
       deploy: "https://spheres3d.netlify.app/",
