@@ -59,8 +59,12 @@ function NavBar() {
       >
         Projects
       </a>
-      <a className={inactive} draggable="false">
-        Resume
+      <a
+        href="#contact"
+        className={activeId === "contact" ? active : inactive}
+        draggable="false"
+      >
+        Contact
       </a>
     </nav>
   );

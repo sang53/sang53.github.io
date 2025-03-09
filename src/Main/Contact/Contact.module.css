@@ -1,0 +1,13 @@
+.container {
+  margin-block: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  font-size: 2rem;
+  align-items: center;
+
+  > * {
+    background-color: var(--curr-backdrop);
+    user-select: text;
+  }
+}

@@ -5,6 +5,7 @@ import Projects from "./Projects/ProjectContainer/Projects";
 import Technology from "./Technology/Technology";
 import { ThemeContext } from "../contexts/Theme/ThemeContext";
 import classes from "./MainPage.module.css";
+import Contact from "./Contact/Contact";
 
 export default function MainPage() {
   const { theme } = use(ThemeContext);
@@ -16,6 +17,7 @@ export default function MainPage() {
         <Intro nextId="technologies" />
         <Technology nextId="projects-container" />
         <Projects />
+        <Contact />
       </>
     );
   }, []);
