@@ -9,7 +9,7 @@ export default function Resume() {
         <span>0403 727 403</span>
         <span>Wakeley, NSW 2176</span>
       </div>
-      <a href="/resume/resume.pdf" target="_blank" rel="noreferrer">
+      <a href="/resume/Resume.pdf" target="_blank" rel="noreferrer">
         Resume PDF
       </a>
     </section>
