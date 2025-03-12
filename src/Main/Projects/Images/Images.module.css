@@ -3,14 +3,9 @@
   grid-row: span 4;
   align-self: center;
   justify-self: center;
-
-  @media (max-width: 1050px) {
-    min-height: 375px;
-  }
-
-  @media (max-width: 500px) {
-    min-height: 200px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .image {

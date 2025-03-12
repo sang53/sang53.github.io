@@ -2,6 +2,7 @@
   display: flex;
   gap: 3rem;
   align-items: center;
+  flex-wrap: wrap;
 
   a {
     transition: transform 0.4s ease-out, border-style 0.4s;
@@ -10,6 +11,10 @@
       background-color: var(--curr-backdrop);
       color: var(--curr-color);
     }
+  }
+
+  @media (max-width: 1250px) {
+    gap: 1rem;
   }
 }
 

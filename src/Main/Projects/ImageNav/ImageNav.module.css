@@ -1,17 +1,19 @@
 .navBar {
-  position: absolute;
-  bottom: -3rem;
-  left: 45%;
-  display: flex;
   min-width: 10%;
+  align-self: center;
+
+  display: flex;
   justify-content: space-between;
-  z-index: 2;
+  gap: 0.5rem;
+
   background-color: var(--curr-backdrop);
   border: 1px solid var(--curr-color);
   padding: 0.5rem 1rem;
   border-radius: 25px;
+
   transition: transform 500ms;
   will-change: transform;
+  z-index: 2;
 
   &:hover {
     transform: scale(1.25);
@@ -26,7 +28,6 @@
   border: 1px solid var(--curr-color);
   will-change: transform;
   transition: transform 500ms;
-
   cursor: pointer;
 
   &:hover {

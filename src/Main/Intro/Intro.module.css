@@ -1,8 +1,10 @@
 .introContainer {
+  scroll-snap-align: none;
+
   > div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
 
     > div {
       flex-direction: column;
@@ -11,6 +13,7 @@
       border-radius: 15px;
       padding: 1rem;
       box-shadow: 0 0 3px 2px var(--curr-color);
+      scroll-snap-align: center;
 
       > hr {
         align-self: stretch;
