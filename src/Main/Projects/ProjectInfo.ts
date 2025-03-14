@@ -1,6 +1,6 @@
 export const projects: Project[] = [
   {
-    title: "Fake Shopping Page",
+    title: "Shopping Page",
     img: [
       "/images/shopping/shopping-home.jpg",
       "/images/shopping/shopping-category.jpg",

@@ -13,42 +13,43 @@
     "check-types": "tsc -b tsconfig.json --noEmit --pretty"
   },
   "dependencies": {
-    "@react-three/fiber": "9.0.0-rc.7",
+    "@react-three/fiber": "9.1.0",
     "maath": "^0.10.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "three": "^0.173.0"
+    "three": "^0.174.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "^9.22.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "@types/three": "^0.173.0",
+    "@types/three": "^0.174.0",
     "@vitejs/plugin-react-swc": "^3.8.0",
-    "@vitest/coverage-v8": "3.0.6",
-    "@vitest/eslint-plugin": "1.1.32-beta.1",
-    "eslint": "^9.20.1",
-    "eslint-config-prettier": "^10.0.1",
+    "@vitest/coverage-v8": "3.0.8",
+    "@vitest/eslint-plugin": "1.1.37",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-testing-library": "^7.1.1",
-    "globals": "^15.15.0",
-    "happy-dom": "^17.1.1",
-    "typescript": "~5.7.3",
-    "typescript-eslint": "^8.24.1",
-    "vite": "^6.1.1",
-    "vitest": "^3.0.6"
+    "globals": "^16.0.0",
+    "happy-dom": "^17.4.4",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
   },
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.6.2",
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@swc/core"
+      "@swc/core",
+      "esbuild"
     ]
   }
 }
