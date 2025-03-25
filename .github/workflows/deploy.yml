@@ -7,35 +7,4 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js and pnpm
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "pnpm"
-
-      - name: Install Dependencies
-        run: pnpm install
-
-      - name: Build project
-        run: pnpm build
-
-      - name: Deploy to deploy branch
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git
-          git checkout --orphan deploy
-          git rm -rf .
-          mv dist/* .
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push --force origin deploy
+    uses: sang53/CommonWorkflows/.github/workflows/deploy-pnpm.yaml@main
