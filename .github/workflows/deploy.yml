@@ -23,7 +23,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm i -P
 
       - name: Build project
         run: pnpm build
@@ -32,7 +32,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/${{ github.repository }}.git
           git checkout --orphan deploy
           git rm -rf .
           mv dist/* .
