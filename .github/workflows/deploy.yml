@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main, sang53-patch-1
+      - main
+      - sang53-patch-1
 
 jobs:
   build-and-deploy:
