@@ -16,7 +16,11 @@ export default function HeaderContainer() {
           <a href="https://github.com/sang53" target="_blank" rel="noreferrer">
             {linkIcons.gitHub}
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/sang-won-cho-758680355"
+            target="_blank"
+            rel="noreferrer"
+          >
             {linkIcons.linkedIn}
           </a>
         </div>
