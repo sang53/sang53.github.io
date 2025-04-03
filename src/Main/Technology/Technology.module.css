@@ -11,6 +11,7 @@
     width: 7vw;
     height: 7vw;
     background-color: var(--curr-backdrop);
+    cursor: default;
   }
 
   > div {
