@@ -10,12 +10,13 @@ export const projects: Project[] = [
       "/images/shopping/shopping-cart.jpg",
       "/images/shopping/shopping-mobile.jpg",
     ],
-    info: "A demo shopping site made using data from Fake Store API. Search products by category or name, put desired quantity into shopping cart, and checkout after confirming purchase details. Carousel on landing page to display products.",
+    info: "A demo shopping site made using data from Fake Store API. Search products by category or name, put desired quantity into shopping cart, and checkout after confirming purchase details. Uses React Context for persistent cart across multiple routes. Carousel on landing page to display products.",
     technologies: [
       "react",
       "react-router",
+      "vite",
       "vitest",
-      "react-testing-library",
+      "react testing library",
       "css modules",
       "REST API",
     ],
@@ -33,8 +34,8 @@ export const projects: Project[] = [
       "/images/pokemon/pokemon-end.jpg",
       "/images/pokemon/pokemon-mobile.jpg",
     ],
-    info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to select as many different pokemon as you can. High score is tracked across games",
-    technologies: ["react", "REST API"],
+    info: "A memory game using Pokemon data from PokeAPI. Select the pokedex and game settings, then try to choose as many different pokemon as you can. High score is tracked across games, with all-time high score stored in local storage.",
+    technologies: ["react", "REST API", "vite"],
     links: {
       src: "https://github.com/sang53/pokemon-memory-game",
       deploy: "https://sang53-pokemon-memory.netlify.app/",
@@ -50,8 +51,8 @@ export const projects: Project[] = [
       "/images/battleship/battleship-end.jpg",
       "/images/battleship/battleship-mobile.jpg",
     ],
-    info: "Browser remake of the Battleships game. Supports single player vs cpu, as well as tag-in multiplayer",
-    technologies: ["javascript", "css", "html"],
+    info: "Browser remake of the Battleships game. Supports single player vs cpu, as well as tag-in multiplayer. Custom AI which targets adjacent squares, with correct orientation if multiple hits on same ship.",
+    technologies: ["javascript", "css", "html", "webpack"],
     links: {
       src: "https://github.com/sang53/TheOdinProject/tree/main/battleship",
       deploy:
@@ -64,7 +65,7 @@ export const projects: Project[] = [
       "/images/spheres3d/sphere3d-black.jpg",
       "/images/spheres3d/sphere3d-white.jpg",
     ],
-    info: "3D background created for my portfolio. 250 spheres are generated at random positions and move towards the camera while changing colours. Spheres move toward the cursor mimicking gravity. A spotlight points in the direction of the cursor for added interactivity.",
+    info: "3D background created for my portfolio. Hundreds of spheres are generated at random positions and move towards the camera while changing colours. Spheres move toward the cursor mimicking gravity. A spotlight points in the direction of the cursor for added interactivity.",
     technologies: ["three.js", "react-three-fiber", "Typescript", "react"],
     links: {
       src: "https://github.com/sang53/Learn-threejs",
