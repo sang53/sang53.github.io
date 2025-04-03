@@ -7,10 +7,10 @@ export default function Buttons({ theme, toggleTheme }: Props) {
   const { three, toggleThree } = use(BackgroundContext);
   return (
     <div className={classes[theme]}>
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} aria-label="toggle theme">
         {theme === "dark" ? settingIcons.darkTheme : settingIcons.lightTheme}
       </button>
-      <button onClick={toggleThree}>
+      <button onClick={toggleThree} aria-label="toggle background">
         {three ? settingIcons.orbit : settingIcons.circle}
       </button>
     </div>

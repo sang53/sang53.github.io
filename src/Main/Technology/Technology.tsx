@@ -11,7 +11,9 @@ export default function Technology({ nextId }: { nextId: string }) {
         <div className={classes.unstyled}>
           {techIcons.unstyled}
           {techIcons.image.map((img) => {
-            return <img src={img.src} key={img.src} />;
+            return (
+              <img src={img.src} key={img.alt} alt={img.alt} title={img.alt} />
+            );
           })}
         </div>
       </div>

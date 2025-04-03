@@ -12,6 +12,8 @@ export default function Images({ imgLinks }: Props) {
           <img
             key={idx}
             src={image.src}
+            height="1080"
+            width="1920"
             className={idx === currIdx ? classes.front : classes.image}
             onMouseEnter={() => {
               setHover(true);

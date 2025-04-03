@@ -13,13 +13,19 @@ export default function HeaderContainer() {
       <>
         <div className="flex">
           <p>Sang Won Cho</p>
-          <a href="https://github.com/sang53" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/sang53"
+            target="_blank"
+            rel="noreferrer"
+            title="Github Link"
+          >
             {linkIcons.gitHub}
           </a>
           <a
             href="https://www.linkedin.com/in/sang-won-cho-758680355"
             target="_blank"
             rel="noreferrer"
+            title="LinkedIn Link"
           >
             {linkIcons.linkedIn}
           </a>
