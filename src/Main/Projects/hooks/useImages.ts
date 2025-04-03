@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 export function useImages(imgLinks: string[]) {
   const images = useMemo(() => preloadImages(imgLinks), [imgLinks]);
@@ -6,18 +6,21 @@ export function useImages(imgLinks: string[]) {
   const [hover, setHover] = useState(false);
 
   // sets new idx if given, otherwise sets next idx (wraps around)
-  const nextImg = (newIdx?: number) => {
-    if (newIdx !== undefined) setCurrIdx(newIdx);
-    else setCurrIdx((currIdx + 1) % images.length);
-  };
+  const nextImg = useCallback(
+    (newIdx?: number) => {
+      if (newIdx !== undefined) setCurrIdx(newIdx);
+      else setCurrIdx((currIdx + 1) % images.length);
+    },
+    [currIdx, images.length]
+  );
 
   // starts animation if hovered
   useEffect(() => {
     if (!hover) return;
-    const interval = setInterval(nextImg, 2000);
+    const interval = setTimeout(nextImg, 2000);
 
     return () => {
-      clearInterval(interval);
+      clearTimeout(interval);
     };
   });
 
