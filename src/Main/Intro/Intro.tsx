@@ -36,7 +36,7 @@ export default function Intro({ nextId }: { nextId: string }) {
           </p>
           <p>
             I have found myself happier and more fulfilled, and can promise that
-            I will dedicate myself my role.
+            I will dedicate myself to my role.
           </p>
         </div>
         <div className="flex">

@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "/images/pokemon/pokemon-end.jpg",
       "/images/pokemon/pokemon-mobile.jpg",
     ],
-    info: "A memory game using Pokémon data from PokéAPI. Select the pokédex and game settings, then try to choose as many different pokémon as you can. High score is tracked across games, with all-time high score stored in local storage.",
+    info: "A memory game using Pokémon data from PokéAPI. Select the Pokédex and game settings, then try to choose as many different Pokémon as you can. High score is tracked across games, with all-time high score stored in local storage.",
     technologies: ["React", "REST API", "Vite"],
     links: {
       src: "https://github.com/sang53/PokemonGame",
