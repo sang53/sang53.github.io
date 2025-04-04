@@ -1,8 +1,10 @@
 .navBar {
   display: flex;
-  gap: 3rem;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
+  justify-self: center;
+  width: 100%;
+  max-width: 800px;
 
   a {
     transition: transform 0.4s ease-out, border-style 0.4s;
@@ -13,8 +15,8 @@
     }
   }
 
-  @media (max-width: 1250px) {
-    gap: 1rem;
+  @media (max-width: 1000px) {
+    grid-column: 1 / span 2;
   }
 }
 

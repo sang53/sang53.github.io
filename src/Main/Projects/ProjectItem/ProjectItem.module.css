@@ -15,7 +15,7 @@
   }
 
   > h1 {
-    font-size: var(--font-size-medplus);
+    font-size: var(--font-size-med);
     justify-self: center;
     align-self: center;
   }

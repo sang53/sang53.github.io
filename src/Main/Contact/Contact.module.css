@@ -3,7 +3,7 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  font-size: var(--font-size-medplus);
+  font-size: var(--font-size-med);
   align-items: center;
 
   > * {

@@ -17,17 +17,32 @@
 }
 
 :root {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  @media (min-width: 1080px) {
+    /* annoying on mobile devices */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-  font-family: "JetBrains", "Cormorant", system-ui;
+  font-family: "JetBrains", "Cormorant", system-ui, sans-serif;
+  font-size: 24px;
 
-  --font-size-large: 40px;
-  --font-size-medplus: 36px;
-  --font-size-med: 28px;
-  --font-size-small: 24px;
+  @media (max-width: 1400px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
+
+  --font-size-large: 2rem;
+  --font-size-med: 1.5rem;
+  --font-size-small: 0.75rem;
 
   --font-weight-heading: 550;
   --font-weight-normal: 450;
@@ -39,24 +54,6 @@
   --bgc-light: white;
   --font-light: black;
   --font-dark: white;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  @media (max-width: 1050px) {
-    --font-size-large: 33px;
-    --font-size-medplus: 30px;
-    --font-size-med: 23px;
-    --font-size-small: 16px;
-  }
-
-  @media (max-width: 500px) {
-    --font-size-large: 30px;
-    --font-size-medplus: 27px;
-    --font-size-med: 21px;
-    --font-size-small: 15px;
-  }
 }
 
 #root {
@@ -67,6 +64,7 @@
 .flex {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 section {
@@ -95,8 +93,8 @@ ul {
 }
 
 svg {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
 }
 
@@ -118,7 +116,7 @@ h2 {
 }
 
 h2 {
-  font-size: var(--font-size-medplus);
+  font-size: var(--font-size-med);
 }
 
 a {

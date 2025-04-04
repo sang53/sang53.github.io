@@ -1,5 +1,4 @@
 .mainPage {
-  font-size: var(--font-size-med);
   text-align: center;
   background-blend-mode: overlay;
   color: var(--curr-color);
