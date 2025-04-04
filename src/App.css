@@ -17,7 +17,7 @@
 }
 
 :root {
-  @media (min-width: 1080px) {
+  @media (min-width: 1920px) {
     /* annoying on mobile devices */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
