@@ -4,9 +4,9 @@ import classes from "./Landing.module.css";
 export default function Landing({ nextId }: { nextId: string }) {
   return (
     <section id="landing">
-      <p className={classes.para}>Hi, Welcome to my Portfolio Page</p>
+      <p className={classes.para}>Welcome to my Portfolio Page</p>
       <p className={classes.para}>
-        I&apos;m Sang Won Cho, an aspiring front-end web developer
+        I&apos;m Sang Won Cho, an aspiring full-stack web developer
       </p>
       <a
         onClick={() => {

@@ -27,8 +27,8 @@ export default function Intro({ nextId }: { nextId: string }) {
           <h2>Present</h2>
           <hr />
           <p>
-            After 1.5 years of self-learning and studying, I am ready to work as
-            a front-end web developer.
+            After 2 years of self-learning and studying, I am ready to work as a
+            full-stack web developer.
           </p>
           <p>
             I am very passionate about web development, and computer science as
@@ -47,13 +47,10 @@ export default function Intro({ nextId }: { nextId: string }) {
             this industry and teach me skills to improve my capability.
           </p>
           <p>
-            I plan to expand my skillset to back-end web development, becoming a
-            full-stack web developer.
+            I will continue learning both front-end and back-end web development
+            for a complete skillset in rapidly evolving industry.
           </p>
-          <p>
-            I want to continue to improve and become that best web developer I
-            can be!
-          </p>
+          <p>I want to improve and become that best web developer I can be.</p>
         </div>
       </div>
       <a
