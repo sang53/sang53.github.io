@@ -1,7 +1,7 @@
 import { use } from "react";
 import { BackgroundContext } from "../../contexts/Background/BackgroundContext";
 import classes from "./Buttons.module.css";
-import { settingIcons } from "../../utils/svgIcons/svgIcons";
+import settingIcons from "../../utils/svgIcons/settingIcons";
 
 export default function Buttons({ theme, toggleTheme }: Props) {
   const { three, toggleThree } = use(BackgroundContext);

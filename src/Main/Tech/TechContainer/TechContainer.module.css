@@ -1,0 +1,16 @@
+.techContainer {
+  min-height: 105vh;
+}
+
+.techBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  min-width: 90%;
+  padding: 1rem;
+
+  > div {
+    flex: 1 1 0;
+  }
+}

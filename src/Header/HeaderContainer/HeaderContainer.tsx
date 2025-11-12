@@ -3,7 +3,7 @@ import NavBar from "../NavBar/NavBar";
 import classes from "./HeaderContainer.module.css";
 import { ThemeContext } from "../../contexts/Theme/ThemeContext";
 import Buttons from "../Buttons/Buttons";
-import { linkIcons } from "../../utils/svgIcons/svgIcons";
+import linkIcons from "../../utils/svgIcons/linkIcons";
 
 export default function HeaderContainer() {
   const { theme, toggleTheme } = use(ThemeContext);

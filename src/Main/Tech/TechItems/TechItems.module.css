@@ -1,0 +1,15 @@
+.iconContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+
+  svg,
+  img {
+    min-width: 75px;
+    min-height: 75px;
+    width: 7vw;
+    height: 7vw;
+    background-color: var(--curr-backdrop);
+    cursor: default;
+  }
+}
