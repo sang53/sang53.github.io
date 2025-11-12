@@ -53,7 +53,7 @@ function NavBar() {
         Skills
       </a>
       <a
-        href="#projects-container"
+        href="#project-item-0"
         draggable="false"
         className={activeId === "projects-container" ? active : inactive}
       >

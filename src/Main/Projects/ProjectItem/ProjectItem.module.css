@@ -9,6 +9,7 @@
   border: 1px solid var(--curr-color);
   border-radius: 15px;
   box-shadow: 0 0 3px 2px var(--curr-color);
+  position: relative;
 
   @media (max-width: 1250px) {
     grid-template-columns: 1fr;
@@ -23,4 +24,11 @@
   > div > a {
     margin-inline: 1rem;
   }
+}
+
+.category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: var(--font-size-small);
 }

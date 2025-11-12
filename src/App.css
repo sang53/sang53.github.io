@@ -17,14 +17,14 @@
 }
 
 :root {
-  @media (min-width: 1920px) {
+  @media (min-width: 1800px) {
     /* annoying on mobile devices */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
   }
 
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
