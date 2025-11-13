@@ -1,5 +1,37 @@
 export const projects: Project[] = [
   {
+    title: "Warehouse Inventory App",
+    img: [
+      "/images/warehouse/warehouse-home.webp",
+      "/images/warehouse/warehouse-current.webp",
+      "/images/warehouse/warehouse-orders.webp",
+      "/images/warehouse/warehouse-order-add.webp",
+      "/images/warehouse/warehouse-locations.webp",
+      "/images/warehouse/warehouse-product-indiv.webp",
+      "/images/warehouse/warehouse-task-indiv.webp",
+      "/images/warehouse/warehouse-user-indiv.webp",
+      "/images/warehouse/warehouse-pallet-indiv.webp",
+      "/images/warehouse/warehouse-login.webp",
+    ],
+    category: "FullStack",
+    info: "An inventory app for a simulated warehouse. Manage inventory, tasks & orders (admin), or complete generated tasks according to worker role. Mostly a back-end project with server side rendering using EJS.",
+    technologies: [
+      "Typescript",
+      "PostgreSQL",
+      "express",
+      "EJS",
+      "Passport.js",
+      "node-postgres",
+      "express-session",
+      "express-validator",
+    ],
+    links: {
+      src: "https://github.com/sang53/Warehouse-Inventory",
+      deploy: "https://warehouse-inventory-production-ba35.up.railway.app/",
+    },
+  },
+
+  {
     title: "Shopping Page",
     img: [
       "/images/shopping/shopping-home.webp",
